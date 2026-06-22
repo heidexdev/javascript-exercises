@@ -12,14 +12,9 @@ const removeFromArray = function (arr, ...args) {
         remove();
       }
     }
-
-
   }
   remove();
   return array;
 };
-const result = removeFromArray([1, 2, 2, 4], 2);
-console.log(result);
-
 // Do not edit below this line
 module.exports = removeFromArray;
