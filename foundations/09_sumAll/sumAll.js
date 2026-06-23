@@ -8,19 +8,16 @@ const sumAll = function (a, b) {
   const sm = a > b ? b : a;
   const bg = a > b ? a : b;
   let rangeArray = [];
-  function createRangeArr() {
-    rangeArray.push(sm);
-    for (let i = 1; i <= bg - sm; i++) {
-      rangeArray.push(sm + i);
-    }
+
+  rangeArray.push(sm);
+  for (let i = 1; i <= bg - sm; i++) {
+    rangeArray.push(sm + i);
   }
-  createRangeArr();
-  const initialValue = 0;
+
   const result = rangeArray.reduce(
     (accumulator, currentValue) => accumulator + currentValue,
-    initialValue,
+    0,
   );
-  result;
   return result;
 };
 // Do not edit below this line
