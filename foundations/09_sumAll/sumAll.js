@@ -1,17 +1,18 @@
-const sumAll = function (a, b) {
-  if (a < 0 || b < 0) {
+const sumAll = function (min, max) {
+  if (min < 0 || max < 0) {
     return "ERROR";
   }
-  if (!Number.isInteger(a) || !Number.isInteger(b)) {
+  if (!Number.isInteger(min) || !Number.isInteger(max)) {
     return "ERROR";
   }
-  const sm = a > b ? b : a;
-  const bg = a > b ? a : b;
+  if (min > max) {
+    [min, max] = [max, min];
+  }
   let rangeArray = [];
 
-  rangeArray.push(sm);
-  for (let i = 1; i <= bg - sm; i++) {
-    rangeArray.push(sm + i);
+  rangeArray.push(min);
+  for (let i = 1; i <= max - min; i++) {
+    rangeArray.push(min + i);
   }
 
   const result = rangeArray.reduce(
