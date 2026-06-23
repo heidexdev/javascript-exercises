@@ -23,8 +23,5 @@ const sumAll = function (a, b) {
   result;
   return result;
 };
-const result = sumAll(2, 4);
-console.log(result);
-
 // Do not edit below this line
 module.exports = sumAll;
