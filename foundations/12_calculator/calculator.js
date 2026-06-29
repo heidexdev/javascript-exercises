@@ -32,7 +32,16 @@ const power = function (base, exponent) {
   });
 };
 
-const factorial = function () {};
+const factorial = function (num) {
+  let numToDown = [1];
+  for (let i = num; i > 0; i--) {
+    numToDown.push(i);
+  }
+  return numToDown.reduce((total, currentNum) => {
+    total *= currentNum;
+    return total;
+  });
+};
 
 // Do not edit below this line
 module.exports = {
