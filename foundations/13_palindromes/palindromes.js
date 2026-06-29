@@ -30,8 +30,6 @@ const palindromes = function (string) {
   const result = isPalindromes();
   return result;
 };
-const result = palindromes("A car, a man, a maraca.");
-// console.log(result);
 
 // Do not edit below this line
 module.exports = palindromes;
