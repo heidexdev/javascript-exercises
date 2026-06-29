@@ -10,16 +10,18 @@ const palindromes = function (string) {
   const firstHalfSplit = splitString.splice(0, splitString.length / 2);
   splitString.reverse();
 
-  function isPalindromes(arr1, arr2) {
-    for (let i = 0; i < arr1.length; i++) {
-      if (arr1[i] !== arr2[i]) {
+  const isPalindromes = () => {
+    for (let i = 0; i < firstHalfSplit.length; i++) {
+      if (firstHalfSplit[i] !== splitString[i]) {
         return false;
       } else {
         continue;
       }
     }
-  }
-  return true;
+    return true;
+  };
+  const result = isPalindromes();
+  return result;
 };
 const result = palindromes("racecar");
 console.log(result);
