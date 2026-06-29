@@ -20,6 +20,7 @@ const multiply = function (array) {
   });
 };
 
+// I did not know there is a operator ** LOL :D
 const power = function (base, exponent) {
   let baseArray = [];
   for (let i = 0; i < exponent; i++) {
