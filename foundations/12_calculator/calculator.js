@@ -20,7 +20,16 @@ const multiply = function (array) {
   });
 };
 
-const power = function () {};
+const power = function (base, exponent) {
+  let baseArray = [];
+  for (let i = 0; i < exponent; i++) {
+    baseArray.push(base);
+  }
+  return baseArray.reduce((total, currentNum) => {
+    total *= currentNum;
+    return total;
+  });
+};
 
 const factorial = function () {};
 
